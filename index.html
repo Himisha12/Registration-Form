@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body onload="hideSuccessMessage(); hideRefillButton();">
+    <h1>Registration Form</h1>
+    <form  name="myForm" onsubmit="return validateform()" method="post">
+        <div class="formdesign" id="name">
+            Name:<input type="text" name="fname" required><b> <span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="email">
+            Email:<input type="email" name="femail" required><b> <span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="phone">
+            Phone:<input type="phone" name="fphone" required><b> <span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="pass">
+            Password:<input type="password" name="fpass" required><b> <span class="formerror"></span></b>
+        </div>
+        <div class="formdesign" id="cpass">
+            Confirm Password:<input type="password" name="fcpass" required><b> <span class="formerror"></span></b>
+        </div>
+        <button class="but" type="submit" value="Submit">Submit</button>
+    </form>
+    <div id="successMessage" style="display: none;">Form submitted successfully!</div>
+    <div id="successContainer" style="display: none;">
+        <button class="but" onclick="refillForm()">Refill</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
