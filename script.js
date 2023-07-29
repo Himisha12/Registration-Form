@@ -59,7 +59,7 @@ function clearErrors()
         //     returnval = false;
         // }
         var email = document.forms['myForm']["femail"].value;
-        if(email.length>20){
+        if(email.length>30){
             seterror("email","*Length of email is too long!");
             returnval = false;
         }
